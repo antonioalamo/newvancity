@@ -79,22 +79,25 @@ body {
   margin-bottom: 2rem;
   color: #2c5364;
 }
-.servicios-grid {
+.servicios-grid, .nosotros-grid, .unidades-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+  margin-bottom: 2rem;
 }
-.servicio-card {
+.servicio-card, .nosotros-card, .unidades-card {
   background: #f8fafc;
   border-radius: 18px;
   box-shadow: 0 2px 16px rgba(44,83,100,0.07);
   padding: 2rem 1.5rem;
-  max-width: 320px;
-  text-align: center;
+  max-width: 340px;
+  min-width: 260px;
+  flex: 1 1 300px;
+  text-align: left;
   transition: transform 0.2s, box-shadow 0.2s;
 }
-.servicio-card:hover {
+.servicio-card:hover, .nosotros-card:hover, .unidades-card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 8px 32px rgba(44,83,100,0.13);
 }
@@ -106,6 +109,11 @@ body {
 .servicio-card h3 {
   color: #0f2027;
   margin-bottom: 0.5rem;
+}
+.nosotros h2, .unidades h2 {
+  text-align: center;
+  color: #2c5364;
+  margin-bottom: 2rem;
 }
 
 .galeria {
@@ -193,6 +201,12 @@ body {
   .navbar {
     flex-direction: column;
     gap: 1rem;
+  }
+}
+@media (max-width: 900px) {
+  .servicios-grid, .nosotros-grid, .unidades-grid {
+    flex-direction: column;
+    align-items: center;
   }
 }
 @media (max-width: 600px) {
