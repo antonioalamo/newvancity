@@ -85,6 +85,17 @@ body {
   gap: 2rem;
   justify-content: center;
   margin-bottom: 2rem;
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .servicios-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 }
 .servicio-card, .nosotros-card, .unidades-card {
   background: #f8fafc;

@@ -12,9 +12,9 @@
     <nav class="navbar">
       <div class="logo">New Van City</div>
       <ul class="nav-links">
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="unidades.html">Unidades</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#nosotros">Unidades</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
@@ -27,7 +27,7 @@
     </div>
   </header>
 
-  <section id="servicios" class="servicios" style="display:none;">
+  <section id="servicios" class="servicios">
     <h2>Nuestros Servicios</h2>
     <div class="servicios-grid">
       <div class="servicio-card">
@@ -48,14 +48,31 @@
     </div>
   </section>
 
-  <section id="galeria" class="galeria" style="display:none;">
-    <h2>Galería</h2>
-    <div class="galeria-grid">
-      <img src="public/img/4ee859_736b9cad68af450a9a17f2c46553479a~mv2_d_2000_1332_s_2.avif" alt="Van en la naturaleza">
-      <img src="public/img/4ee859_0106d16f87c041569ab9b6b9e45a7fda~mv2.avif" alt="Interior de van">
-      <img src="public/img/4ee859_1536ddd63885417289b7cb4cc5358ae2~mv2.avif" alt="Van en la ciudad">
-      <img src="public/img/4ee859_1836cb2b18b54a23b0daf567a76cfbe3~mv2.avif" alt="Van en la playa">
+  <section id="nosotros" class="servicios">
+    <h2 style="text-align:center;color:#2c5364;">Nosotros</h2>
+    <div class="servicios-grid">
+      <div class="servicio-card">
+        <img src="public/img/84770f_2697383481646659a133dfd3498b4f10.jpg.avif" alt="Nosotros" style="width:100%;border-radius:12px;margin-bottom:1rem;">
+        <h3>Quiénes Somos</h3>
+        <p>Somos una empresa dedicada al transporte de personal y turismo, comprometidos con la seguridad, puntualidad y comodidad. Nuestro equipo profesional y flota moderna nos permite adaptarnos a las necesidades de cada cliente, brindando un servicio confiable y personalizado.</p>
+      </div>
+      <div class="servicio-card">
+        <img src="public/img/4ee859_0106d16f87c041569ab9b6b9e45a7fda~mv2.avif" alt="Unidades" style="width:100%;border-radius:12px;margin-bottom:1rem;">
+        <h3>Nuestras Unidades</h3>
+        <p>Contamos con vehículos de 10, 14 y 16 pasajeros, además de taxis, autos, transfers y buses. Todas nuestras unidades tienen aire acondicionado y butacas cómodas. Consulte por disponibilidad y elija la opción que mejor se adapte a su viaje.</p>
+      </div>
+      <div class="servicio-card">
+        <img src="public/img/4ee859_0f581f53b5fe49c9ba443262e20eedad~mv2.png.avif" alt="Características y Flota" style="width:100%;border-radius:12px;margin-bottom:1rem;">
+        <h3>Características y Flota</h3>
+        <ul style="margin-bottom:0.7rem;">
+          <li>Conductores profesionales a su servicio</li>
+          <li>Máquinas inscritas en el MTT</li>
+          <li>Seguros de asientos en todas nuestras unidades</li>
+        </ul>
+        <p>Disponemos de una infraestructura que va desde automóviles hasta buses tipo pullman de 45+ asientos para turismo y empresas.</p>
+      </div>
     </div>
+  </section>
   </section>
 
   <section id="contacto" class="contacto">
@@ -71,5 +88,18 @@
   <footer class="footer">
     <p>&copy; 2025 New Van City Chile. Todos los derechos reservados.</p>
   </footer>
+
+  <button id="backToTopBtn" title="Volver arriba" style="position:fixed;bottom:32px;right:32px;z-index:1000;display:none;background:linear-gradient(90deg,#11998e,#38ef7d);color:#fff;border:none;border-radius:50%;width:54px;height:54px;box-shadow:0 2px 16px rgba(44,83,100,0.13);font-size:2rem;cursor:pointer;transition:background 0.2s,transform 0.2s;align-items:center;justify-content:center;outline:none;">
+    ↑
+  </button>
+  <script>
+    const btn = document.getElementById('backToTopBtn');
+    window.addEventListener('scroll', () => {
+      btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+    });
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
